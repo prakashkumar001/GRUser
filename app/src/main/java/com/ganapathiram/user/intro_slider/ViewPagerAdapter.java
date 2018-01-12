@@ -1,4 +1,4 @@
-package com.ganapathiram.user.activities;
+package com.ganapathiram.user.intro_slider;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
