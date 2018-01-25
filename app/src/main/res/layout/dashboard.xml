@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+
+        >
+
+        <EditText
+            android:id="@+id/searchbar"
+            android:background="@drawable/search_bar"
+            android:hint="Search"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioGroup
+                android:id="@+id/rg_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_title"
+                android:layout_marginLeft="@dimen/marginsmall"
+                android:layout_marginRight="@dimen/marginsmall"
+                android:layout_marginTop="@dimen/categorytext"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/snacks"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginsmall"
+                    android:background="@drawable/selected_item_org_dot"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/marginsmall"
+                    android:paddingTop="@dimen/marginsmall"
+                    android:text="Snacks"
+                    android:textColor="@color/rbtn_textcolor_selector"
+                    android:textSize="16dp" />
+
+
+                <RadioButton
+                    android:id="@+id/beverages"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginsmall"
+                    android:background="@drawable/selected_item_lav_dot"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/marginsmall"
+                    android:paddingTop="@dimen/marginsmall"
+                    android:text="Beverages"
+                    android:textColor="@color/rbtn_textcolor_selector"
+                    android:textSize="16dp" />
+
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/productList"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent"
+
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
