@@ -1,6 +1,7 @@
 package com.ganapathiram.user.intro_slider;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
@@ -17,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ganapathiram.user.R;
+import com.ganapathiram.user.activiites.Dashboard;
 
 /**
  * Created by Creative IT Works on 11-Jan-18.
@@ -171,6 +173,17 @@ public class IntroActivity extends AppCompatActivity implements ViewPager.OnPage
         dialog.show();
         dialog.getWindow().setLayout((9 * width) / 10, (6 * height) / 10);
         dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i=new Intent(IntroActivity.this, Dashboard.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
 
 
